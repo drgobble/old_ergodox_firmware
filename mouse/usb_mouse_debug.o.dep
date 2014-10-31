@@ -1,0 +1,3 @@
+mouse/usb_mouse_debug.o: mouse/usb_mouse_debug.c mouse/usb_mouse_debug.h
+
+mouse/usb_mouse_debug.h:

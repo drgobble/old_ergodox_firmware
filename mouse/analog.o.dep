@@ -1,0 +1,3 @@
+mouse/analog.o: mouse/analog.c mouse/analog.h
+
+mouse/analog.h:

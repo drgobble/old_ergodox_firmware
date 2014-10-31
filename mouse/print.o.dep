@@ -1,0 +1,5 @@
+mouse/print.o: mouse/print.c mouse/print.h mouse/usb_mouse_debug.h
+
+mouse/print.h:
+
+mouse/usb_mouse_debug.h:
