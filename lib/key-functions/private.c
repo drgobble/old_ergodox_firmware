@@ -30,6 +30,9 @@
  *   or remove 'keycode' from the list of currently pressed keys, to be sent at
  *   the end of the current cycle (see main.c)
  */
+#define  IS_PRESSED    main_arg_is_pressed
+
+int num_keys_pressed = 0;
 void _kbfun_press_release(bool press, uint8_t keycode) {
 	// no-op
 	if (keycode == 0)
@@ -71,6 +74,14 @@ void _kbfun_press_release(bool press, uint8_t keycode) {
 				       return;
 	}
 
+	if(IS_PRESSED) {
+	  num_keys_pressed++;
+	} else {
+	  num_keys_pressed--;
+	}
+	if(num_keys_pressed>=2) {
+	  press = !IS_PRESSED;
+	}
 	// all others
 	for (uint8_t i=0; i<6; i++) {
 		if (press) {
